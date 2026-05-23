@@ -48,6 +48,17 @@ A modern, responsive, and highly interactive Flight Management Progressive Web A
    \`\`\`
    The app will be available at [http://localhost:3000](http://localhost:3000).
 
+## 🧪 Test Data (Available Flights)
+If you populated the database using the `seed.sql` file, you can test the flight search with the following seeded routes and dates:
+- **JFK ➔ LHR**: June 1, 2026
+- **LHR ➔ JFK**: June 2, 2026
+- **DXB ➔ SIN**: June 3, 2026
+- **SIN ➔ DXB**: June 4, 2026
+- **NRT ➔ SYD**: June 5, 2026
+- **SYD ➔ NRT**: June 7, 2026
+- **CDG ➔ JFK**: June 8, 2026
+- **JFK ➔ CDG**: June 9, 2026
+
 ## 🧠 Zustand Store Architecture
 The state is managed using two primary Zustand stores:
 1. `useFlightStore`: Manages the active booking wizard state. It uses the `persist` middleware to save progress across page reloads. We utilize the `partialize` configuration to deliberately exclude sensitive passenger information (like `passport_no`) from being stored in `localStorage`. There is a store reset action triggered upon logout to ensure data is safely cleared.
